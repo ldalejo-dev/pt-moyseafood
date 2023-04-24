@@ -1,6 +1,8 @@
 import React,{useState, useEffect} from 'react';
 import {Table, TableContainer,TableRow,TableHead,TableCell, TableBody} from '@mui/material';
 import {Edit} from '@mui/icons-material';
+import { Link } from 'react-router-dom';
+import './style.css'
 
 const UsersTable = () => {
     //setear los hooks
@@ -43,7 +45,7 @@ const UsersTable = () => {
 
   return (
     <div>
-        <input type="text" placeholder='Buscar' value={search} onChange={searcher}></input>
+        <input type="text" placeholder='Buscar' value={search} onChange={searcher} className='searcher'></input>
         <TableContainer>
             <Table>
                 <TableHead>
@@ -62,7 +64,7 @@ const UsersTable = () => {
                             <TableCell>{user.username}</TableCell>
                             <TableCell>{user.email}</TableCell>
                             <TableCell>{user.phone}</TableCell>
-                            <TableCell><Edit/></TableCell>
+                            <TableCell><Link to={`/edit/${user.id}`}><Edit></Edit></Link></TableCell>
                         </TableRow>
                     ))}
                 </TableBody>

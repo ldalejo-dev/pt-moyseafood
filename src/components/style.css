@@ -1,0 +1,30 @@
+.principal-container{
+    margin: 1em;
+}
+
+.button{
+    height: 3em;
+    width: 30%;
+    margin: 1em;
+    border-radius: 5px;
+    text-decoration: none;
+
+    
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.searcher{
+    height: 3em;
+    width: 50%;
+    margin: 1em;
+    padding: 0.5em;
+}
+
+fieldset{
+    border: none;
+}
